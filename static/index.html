@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>DW workflow</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <!--<link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">-->
+    <!--<link href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">-->
+    <!--<link href="node_modules/x-editable/dist/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet">-->
+    <!--<link href="node_modules/codemirror/lib/codemirror.css" rel="stylesheet">-->
+    <!--<link href="node_modules/codemirror/theme/icecoder.css" rel="stylesheet">-->
+
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="node_modules/x-editable/dist/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet">
+    <link href="node_modules/codemirror/lib/codemirror.css" rel="stylesheet">
+    <link href="node_modules/codemirror/theme/icecoder.css" rel="stylesheet">
+
+
+    <link href="css/pyflow.css" rel="stylesheet">
+    <style>
+      body {
+        padding-top: 0px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+    </style>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">DW workflow</a>
+        </div>
+
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#" id="menuFlow">flow<span class="sr-only">(current)</span></a></li>
+            <li><a href="#" id="menuNode">node</a></li>
+          </ul>
+
+
+
+        </div><!-- /.navbar-collapse -->
+
+      </div><!-- /.container-fluid -->
+
+    </nav>
+
+    <div class="container-fluid" id="mainUI">
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="node_modules/x-editable/dist/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
+    <script type="text/javascript" src="node_modules/codemirror/lib/codemirror.js"></script>
+    <script type="text/javascript" src="node_modules/codemirror/mode/python/python.js"></script>
+    <script type="text/javascript" src="node_modules/js-beautify/js/lib/beautify.js"></script>
+    <script type="text/javascript" src="node_modules/d3/build/d3.min.js"></script>
+    <script type="text/javascript" src="node_modules/jsplumb/dist/js/jsplumb.min.js"></script>
+    <script type="text/javascript" src="./node_modules/requirejs/require.js"></script>
+    <script>
+      requirejs.config({
+          baseUrl: 'js',
+          paths: {
+            comp: './components',
+            model: './model'
+          }
+      });
+    </script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

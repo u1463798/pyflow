@@ -1,0 +1,182 @@
+/************/
+/*Tree Style*/
+/************/
+
+.tree li {
+    margin: 0px 0;
+    list-style-type: none;
+    position: relative;
+    padding: 18px 5px 0px 5px;
+}
+
+.tree li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    right: auto;
+    left: -20px;
+    border-left: 1px solid #ccc;
+    bottom: 50px;
+}
+
+.tree li::after {
+    content: '';
+    position: absolute;
+    top: 30px;
+    width: 25px;
+    height: 10px;
+    right: auto;
+    left: -20px;
+    border-top: 1px solid #ccc;
+}
+
+.tree li a {
+    display: inline-block;
+    border: 1px solid #2e6da4;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #fff;
+    font-family: arial, verdana, tahoma;
+    font-size: 11px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    background: #337ab7;
+}
+
+
+/*Remove connectors before root*/
+
+.tree > ul > li::before,
+.tree > ul > li::after {
+    border: 0;
+}
+
+
+/*Remove connectors after last child*/
+
+.tree li:last-child::before {
+    height: 30px;
+}
+
+
+/*Time for some hover effects*/
+/*We will apply the hover effect the the lineage of the element also*/
+
+.tree li a:hover,
+.tree li a:hover+ul li a {
+    background: #73A550;
+    color: #fff;
+    border: 1px solid #94a0b4;
+}
+
+
+/*Connector styles on hover*/
+
+.tree li a:hover+ul li::after,
+.tree li a:hover+ul li::before,
+.tree li a:hover+ul::before,
+.tree li a:hover+ul ul::before {
+    border-color: #94a0b4;
+}
+
+.pyflowtree > li > a {
+    display: inline-block;
+    border: 1px solid #2e6da4;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #fff;
+    font-family: arial, verdana, tahoma;
+    font-size: 11px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    background: #337ab7;
+}
+
+
+/************/
+/*Node Style*/
+/************/
+
+.pyflownode {
+    border: 1px solid #346789;
+    box-shadow: 2px 2px 19px #aaa;
+    -o-box-shadow: 2px 2px 19px #aaa;
+    -webkit-box-shadow: 2px 2px 19px #aaa;
+    -moz-box-shadow: 2px 2px 19px #aaa;
+    -moz-border-radius: 0.5em;
+    border-radius: 0.5em;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+    width: 8em;
+    height: 4em;
+    line-height: 2em;
+    text-align: center;
+    z-index: 20;
+    position: absolute;
+    background-color: #eeeeee;
+    color: black;
+    font-family: helvetica;
+    padding: 0.5em;
+    font-size: 1em;
+}
+
+.pyflownode:hover {
+    box-shadow: 2px 2px 19px #444;
+    -o-box-shadow: 2px 2px 19px #444;
+    -webkit-box-shadow: 2px 2px 19px #444;
+    -moz-box-shadow: 2px 2px 19px #444;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+}
+
+._jsPlumb_connector {
+    z-index: 4;
+}
+
+._jsPlumb_endpoint {
+    z-index: 21;
+    cursor: pointer;
+}
+
+._jsPlumb_dragging {
+    z-index: 4000;
+}
+
+.flowbutton {
+    margin-left: 3px;
+}
+
+.flowbody {
+    height: 500px;
+}
+
+#flow-panel {
+    height: 500px;
+    width: 100%;
+    position: absolute;
+}
+#showUI{
+    margin-left: 15px;
+}
+#queryUI{
+    margin-left: 15px;
+}
+
+#table2{
+    word-break:break-all; word-wrap:break-all;
+}
+#table3{
+    word-break:break-all; word-wrap:break-all;
+}
+
+.node-fail {
+    background-color: OrangeRed    
+}
+
+.node-skip {
+    background-color: Silver     
+}
